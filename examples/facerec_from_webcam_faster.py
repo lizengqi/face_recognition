@@ -14,21 +14,39 @@ import cv2
 video_capture = cv2.VideoCapture(0)
 
 # Load a sample picture and learn how to recognize it.
-obama_image = face_recognition.load_image_file("obama.jpg")
-obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
+# obama_image = face_recognition.load_image_file("obama.jpg")
+# obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
+#
+# # Load a second sample picture and learn how to recognize it.
+# biden_image = face_recognition.load_image_file("biden.jpg")
+# biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
 
 # Load a second sample picture and learn how to recognize it.
-biden_image = face_recognition.load_image_file("biden.jpg")
-biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
+lizenn_image = face_recognition.load_image_file("/Users/lizengqi/Pictures/face_rec/known_face/lizenn.jpeg")
+lizenn_face_encoding = face_recognition.face_encodings(lizenn_image)[0]
+
+# Load a second sample picture and learn how to recognize it.
+guokai_image = face_recognition.load_image_file("/Users/lizengqi/Pictures/face_rec/known_face/WechatIMG3.jpeg")
+guokai_face_encoding = face_recognition.face_encodings(guokai_image)[0]
+
+# Load a second sample picture and learn how to recognize it.
+zhouzhou_image = face_recognition.load_image_file("/Users/lizengqi/Pictures/face_rec/known_face/20180827191609106.jpeg")
+zhouzhou_face_encoding = face_recognition.face_encodings(zhouzhou_image)[0]
 
 # Create arrays of known face encodings and their names
 known_face_encodings = [
-    obama_face_encoding,
-    biden_face_encoding
+    # obama_face_encoding,
+    # biden_face_encoding,
+    lizenn_face_encoding,
+    guokai_face_encoding,
+    zhouzhou_face_encoding
 ]
 known_face_names = [
-    "Barack Obama",
-    "Joe Biden"
+    # "Barack Obama",
+    # "Joe Biden",
+    "lizengqi",
+    "guokai",
+    "zhouzhou"
 ]
 
 # Initialize some variables
